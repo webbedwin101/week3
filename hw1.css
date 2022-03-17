@@ -48,7 +48,10 @@ p {
 .box {
     height: 100px;
     width: 40%;
-    margin: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
     background-color: #333333;
 }
 
