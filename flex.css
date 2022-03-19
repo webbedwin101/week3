@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Ropa Sans', sans-serif;
+    background: #333;
+}
+/* # UTILITY CLASSES
+================
+3. SELECTOR: all elements with the class of "container" DECLARATIONS: set max-width to 1200 px, set margin to 0 on the y-axis and center on the x-axis HINT: auto
+4. SELECTOR: all elements with the class of "d-flex" DECLARATIONS: set display to flex
+5. SELECTOR: all elements with the class of "btn" DECLARATIONS: set padding to 0.5 rem to top & bottom, set padding on the left & right to 2 rem, set border to none, round the corners 25 px, set the cursor to have a pointer HINT: cursor property
+6. SELECTOR: all elements with the class of "btn" on the "hover" event HINT: pseudo selectors DECLARATIONS: set background to off black, set text to white
+7. SELECTOR: all elements with the class of "btn-lg" DECLARATIONS: set padding on the top & bottom to 1 rem, set padding on the left and right to 4 rem, set font size to 1.2 rem */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.d-flex {
+    display: flex; 
+}
+
+.btn {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border: none; 
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+.btn-lg {
+    padding: 1rem 4rem 1rem 4rem; 
+    font-size: 1.2rem; 
+}
+
+/* # NAVIGATION STYLING
+====================
+8. SELECTOR: all nav elements DECLARATIONS: set position to fixed, set top & left to 0, set width 100%, height 50px, set background to white, set z-index the 1
+9. SELECTOR: all div elements inside of nav element DECLARATIONS: set height to 100%, using flex alignment tools (justify-content, align-items, align-content) align the flex-items on the x-axis to "space-between", align the flex-items on the y-axis to the "center"
+10. SELECTOR: all h1 elements inside of a div inside of a nav DECLARATIONS: set cursor to a pointer
+11. SELECTOR: all h1 elements inside a div inside a nav on the hover effect DECLARATIONS: set color to green
+12. SELECTOR: all ul elements inside of a div inside of a nav DECLARATIONS: remove all the li element bullet points, using flex alignment tools set the x-axis to center, set the y-axis to center
+13. SELECTOR: all li elements inside of a ul inside of a div inside inside of a nav DECLARATIONS: set padding on the top & bottom to 0.2 rem, set padding on the left & right to 1rem, set cursor to pointer
+14. SELECTOR: the last li elements inside of a ul inside of a div inside inside of a nav DECLARATIONS: set padding on the right to 0
+15. SELECTOR: all li elements inside of a ul inside of a div inside inside of a nav on the hover effect DECLARATIONS: set text color to green */
+
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%; 
+    height: 50px;
+    background: #fff;
+    z-index: 1;
+}
+
+nav > div {
+    height: 100%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+}
+
+nav > div > h1 {
+    cursor: pointer;
+}
+
+nav > div > h1:hover {
+    color: rgb(58, 128, 58);
+}
+
+nav > div > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+nav > div > ul > li {
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    cursor: pointer; 
+}
+
+nav > div > ul > li:last-child { /*:last-child*/
+    padding-right: 0px;
+}
+
+nav > div > ul > li:hover{
+    color: green;
+}
+
+/* # SHOWCASE STYLING
+===================
+16. SELECTOR: select the element with the id of "showcase" DECLARATIONS: set height to 100% of the viewport height, set background to green, set text color to white, set display to flex
+17. SELECTOR: select all divs inside of the element with the id of "showcase" DECLARATIONS: set height & width to 100%, set flex direction to a column, align the flex-items to the center horizontally and vertically
+18. SELECTOR: all h1's inside of a div inside of an element with the id of "showcase" DECLARATIONS: set font-size to 3.5 rem, set margin bottom to 1 rem
+19. SELECTOR: all p tags inside of a div inside an element with the id of "showcase" DECLARATIONS: set font-size to 1.25 rem set padding to 0 on the top and bottom, set padding to 10 rem on the left and right, set text to align in the center, set margin bottom to 1 rem */
+
+#showcase {
+    height: 100vh; 
+    background: rgb(58, 128, 58);
+    color: white;
+    display: flex;
+}
+
+#showcase > div {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#showcase > div > h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+#showcase > div > p {
+    font-size: 1.25rem;
+    padding: 0 10rem 0 10rem; 
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* # CARDS
+========
+20. SELECTOR: the element with the id of "cards" DECLARATIONS: set height to 100% of the viewport height, set background to blue, set text color to white, set display to flex
+21. SELECTOR: all div elements with the class of "container" inside of an element with the id of "cards" DECLARATIONS: align the flex-items to the center on the horizontal axis, align the flex-items to the center on the vertical axis
+22. SELECTOR: all elements with the class of "card" inside of an element with the id of "cards" DECLARATIONS: set padding all the way around to 2 rem, set margin to 0 on the top & bottom, set margin to 1 rem on the left & right, set height to 60% of the parent container, set flex-items to display as a column, set the flex-items to align "space-around" on the vertical axis (remember the axis flip), set the flex-items ot align "center" on the horizontal axis, set text to align to the center, set the border to have a 3 px solid white, set the corners to be rounded 5 px
+23. SELECTOR: all i elements inside of div's inside of an element with the class of "card" inside of an element with the id of "cards" DECLARATIONS: set font size to 2.5 rem, set margin bottom to 1.5 rem
+24. SELECTOR: all elements with the class of "lead" in a div, in an element with the class of "card", in an element with the id of "cards" DECLARATIONS: set text to be aligned center, font size 1.7 rem, set text to bold, set margin bottom to 1 rem
+25. SELECTOR: all paragraph elements in a div, in an element with the class of "card", in an element with the id of "cards" DECLARATIONS: set text to align justify */
+
+#cards {
+    height: 100vh;
+    background: #252588;
+    color: white; 
+    display: flex;
+}
+
+#cards > div.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cards .card {
+    padding: 2rem; 
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: 60%; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+#cards .card div i {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#cards .card div .lead {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#cards .card div p {
+    text-align: justify;
+}
+/* # FOOTER STYLING
+================
+26. SELECTOR: all footer elements DECLARATIONS: set background to off black, set text color to white
+27. SELECTOR: all elements with the class of "container" inside a footer element DECLARATIONS: set flex direction to column, set flex-items to align center on the horizontal & vertical axis
+28. SELECTOR: all h3 elements in a an element with the class of "container", in a footer element DECLARATIONS: set margin on the top & bottom to 2 rem and 0 on the left & right
+29. SELECTOR: all paragraphs in an element with the class of "container", in a footer element DECLARATIONS: set margin bottom to 1 rem
+30. SELECTOR: all a elements in an element with the class of "container", in a footer element DECLARATIONS: set the text color to white, set margin bottom to 1 rem */
+
+footer {
+    background: #333;
+    color: #fff; 
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container h3 {
+    margin: 2rem 0 2rem 0; 
+}
+
+footer .container p {
+    margin-bottom: 1rem;
+}
+footer .container a {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+/* 31. MEDIA QUERY: all screen sizes 500 px wide and below
+A. SELECTOR: the root element DECLARATIONS: set font size to 10 px
+B. SELECTOR: all elements with the class of "container" DECLARATIONS: set max-width to 350px
+C. SELECTOR: all paragraphs in an element with the class of "container" in an element with the id of "showcase" DECLARATIONS: set padding to 0 on the top & bottom and 3 rem on the left and right
+D. SELECTOR: all elements with the class of "container" in an element with the id of "cards" DECLARATIONS: set flex direction to column, set margin bottom to 1 rem
+E. SELECTOR: all elements with the class of "card" in an element with the id of "cards" DECLARATIONS: set height to 30% of the parent container */
+
+@media only screen and (max-width: 500px) {
+    :root {
+        font-size: 10px;
+    }
+    .container {
+        max-width: 350px;
+    }
+    #showcase .container p {
+        padding: 0px 3rem 0px 3rem;
+    }
+    #cards .container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    #cards .card {
+        height: 30%;
+    }
+}
+
+/* 32. MEDIA QUERY: all screen sizes 500 px tall and shorter
+A. SELECTOR: an element with the class of "cards" DECLARATIONS: set height to 300% of the viewport height
+B. SELECTOR: all elements with the class of "container" in an element with the id of "cards" DECLARATIONS: set flex direction to column, set margin bottom to 1 rem
+C. SELECTOR: set all elements with the class of "card" in an element with the id of "cards" DECLARATIONS: set height to 30% of the parent container */
+
+@media only screen and (max-height: 500px) {
+    .card {
+        height: 300vh;
+    }
+    #cards .container {
+        display: flex; 
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    #cards .card {
+        height: 30%;
+    }
+}
+
+
+
+
+
+
+
